@@ -1,0 +1,85 @@
+/* 广告位通用样式 */
+.ad-container {
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+    background: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.ad-container::before {
+    content: attr(data-ad-label);
+    display: block;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    padding: 4px 0;
+    background: #eee;
+    letter-spacing: 1px;
+}
+
+/* 横幅广告样式 */
+.ad-banner {
+    width: 100%;
+    max-width: 970px;
+    min-height: 90px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* 侧边栏广告样式 */
+.ad-sidebar {
+    width: 300px;
+    min-height: 250px;
+    margin: 15px auto;
+    padding: 10px;
+    position: sticky;
+    top: 20px;
+}
+
+/* 响应式广告容器 */
+.ad-responsive {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 文章内嵌广告 */
+.ad-article {
+    max-width: 728px;
+    min-height: 90px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .ad-banner {
+        min-height: 60px;
+        padding: 10px;
+    }
+    
+    .ad-sidebar {
+        width: 100%;
+        max-width: 300px;
+        position: static;
+    }
+    
+    .ad-article {
+        min-height: 60px;
+        margin: 20px auto;
+    }
+}
+
+/* 高DPI屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ad-container {
+        border: 0.5px solid #eee;
+    }
+}

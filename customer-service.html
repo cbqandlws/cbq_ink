@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="customerService.title">客户服务 - 企业服务解决方案</title>
+    <meta name="description" content="专业的企业服务支持，为您提供全方位的技术支持和服务保障" data-i18n="[content]customerService.meta.description">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CustomerService",
+        "name": "企业服务解决方案客户服务",
+        "description": "专业的企业服务支持中心",
+        "provider": {
+            "@type": "Organization",
+            "name": "企业服务解决方案",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "images/logo.svg"
+            }
+        }
+    }
+    </script>
+    <style>
+    main { padding-top: var(--header-height); }
+    .hero {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: var(--white);
+        text-align: center;
+        padding: 4rem 0;
+    }
+    .service-channels {
+        padding: 4rem 0;
+    }
+    .channels-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .channel-item {
+        text-align: center;
+        padding: 2rem;
+    }
+    .channel-item .icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+    .faq-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .faq-item {
+        border: 1px solid var(--light-gray);
+    }
+    .faq-header {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .faq-content {
+        padding: 0 1.5rem 1.5rem;
+        display: none;
+    }
+    .faq-item.active .faq-content {
+        display: block;
+    }
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .process-item {
+        text-align: center;
+        position: relative;
+    }
+    .process-number {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+    }
+    .satisfaction-survey {
+        background: var(--light-gray);
+        padding: 4rem 0;
+    }
+    .survey-form {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: var(--white);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+    }
+    .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .rating input {
+        display: none;
+    }
+    .rating label {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #ddd;
+    }
+    .rating label:hover,
+    .rating label:hover ~ label,
+    .rating input:checked ~ label {
+        color: #ffd700;
+    }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="企业服务解决方案" data-i18n="[alt]nav.logo">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="菜单">
+                    <span></span>
+                </button>
+                <ul class="main-nav">
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="category.html" data-i18n="nav.solutions">解决方案</a></li>
+                    <li><a href="article.html" data-i18n="nav.cases">案例展示</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    <li><a href="customer-service.html" class="active" data-i18n="nav.service">客户服务</a></li>
+                </ul>
+                <div class="language-switch">
+                    <button class="btn-lang" data-lang="zh">中文</button>
+                    <button class="btn-lang" data-lang="en">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero page-transition">
+            <div class="container">
+                <h1 class="hero-title" data-i18n="customerService.hero.title">专业客户服务</h1>
+                <p class="hero-subtitle" data-i18n="customerService.hero.subtitle">全天候支持，随时为您服务</p>
+            </div>
+        </section>
+
+        <section class="service-channels page-transition">
+            <div class="container">
+                <h2 class="section-title" data-i18n="customerService.channels.title">服务渠道</h2>
+                <div class="channels-grid">
+                    <div class="card channel-item">
+                        <div class="icon"><i class="fas fa-headset"></i></div>
+                        <h3 data-i18n="customerService.channels.phone.title">电话支持</h3>
+                        <p data-i18n="customerService.channels.phone.description">7x24小时专业客服团队</p>
+                        <a href="tel:+86-10-12345678" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            <span data-i18n="customerService.channels.phone.button">立即拨打</span>
+                        </a>
+                    </div>
+
+                    <div class="card channel-item">
+                        <div class="icon"><i class="fas fa-comments"></i></div>
+                        <h3 data-i18n="customerService.channels.chat.title">在线客服</h3>
+                        <p data-i18n="customerService.channels.chat.description">实时在线交流，快速解决问题</p>
+                        <button class="btn btn-primary" id="startChat">
+                            <i class="fas fa-comment"></i>
+                            <span data-i18n="customerService.channels.chat.button">开始对话</span>
+                        </button>
+                    </div>
+
+                    <div class="card channel-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <h3 data-i18n="customerService.channels.email.title">邮件支持</h3>
+                        <p data-i18n="customerService.channels.email.description">详细的问题描述与解答</p>
+                        <a href="mailto:support@example.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            <span data-i18n="customerService.channels.email.button">发送邮件</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq page-transition">
+            <div class="container">
+                <h2 class="section-title" data-i18n="customerService.faq.title">常见问题</h2>
+                <div class="faq-grid">
+                    <div class="card faq-item">
+                        <div class="faq-header">
+                            <h3 data-i18n="customerService.faq.q1.question">如何开始使用您的服务？</h3>
+                            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-content">
+                            <p data-i18n="customerService.faq.q1.answer">我们提供详细的入门指南和专业的技术支持，帮助您快速上手使用我们的服务。</p>
+                        </div>
+                    </div>
+
+                    <div class="card faq-item">
+                        <div class="faq-header">
+                            <h3 data-i18n="customerService.faq.q2.question">服务支持时间是怎样的？</h3>
+                            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-content">
+                            <p data-i18n="customerService.faq.q2.answer">我们提供7x24小时全天候服务支持，节假日无休。</p>
+                        </div>
+                    </div>
+
+                    <div class="card faq-item">
+                        <div class="faq-header">
+                            <h3 data-i18n="customerService.faq.q3.question">如何升级服务套餐？</h3>
+                            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-content">
+                            <p data-i18n="customerService.faq.q3.answer">您可以随时通过客服联系我们进行套餐升级，我们会提供专业的建议和支持。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-process page-transition">
+            <div class="container">
+                <h2 class="section-title" data-i18n="customerService.process.title">服务流程</h2>
+                <div class="process-grid">
+                    <div class="process-item">
+                        <div class="process-number">1</div>
+                        <h3 data-i18n="customerService.process.step1.title">提交需求</h3>
+                        <p data-i18n="customerService.process.step1.description">选择合适的渠道提交您的服务需求</p>
+                    </div>
+
+                    <div class="process-item">
+                        <div class="process-number">2</div>
+                        <h3 data-i18n="customerService.process.step2.title">需求确认</h3>
+                        <p data-i18n="customerService.process.step2.description">客服人员与您确认具体需求细节</p>
+                    </div>
+
+                    <div class="process-item">
+                        <div class="process-number">3</div>
+                        <h3 data-i18n="customerService.process.step3.title">解决方案</h3>
+                        <p data-i18n="customerService.process.step3.description">制定个性化解决方案并实施</p>
+                    </div>
+
+                    <div class="process-item">
+                        <div class="process-number">4</div>
+                        <h3 data-i18n="customerService.process.step4.title">效果反馈</h3>
+                        <p data-i18n="customerService.process.step4.description">跟进服务效果并收集反馈</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="satisfaction-survey page-transition">
+            <div class="container">
+                <h2 class="section-title" data-i18n="customerService.survey.title">服务评价</h2>
+                <form id="surveyForm" class="survey-form">
+                    <div class="form-group">
+                        <label data-i18n="customerService.survey.satisfaction.label">整体服务满意度</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="satisfaction" value="5">
+                            <label for="star5" title="非常满意"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="satisfaction" value="4">
+                            <label for="star4" title="满意"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="satisfaction" value="3">
+                            <label for="star3" title="一般"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="satisfaction" value="2">
+                            <label for="star2" title="不满意"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="satisfaction" value="1">
+                            <label for="star1" title="非常不满意"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback" data-i18n="customerService.survey.feedback.label">您的建议</label>
+                        <textarea id="feedback" name="feedback" rows="4" data-i18n="[placeholder]customerService.survey.feedback.placeholder"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" data-i18n="customerService.survey.submit">提交评价</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <!-- 页脚将通过JavaScript动态加载 -->
+    </footer>
+
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <h3 data-i18n="customerService.chat.title">在线客服</h3>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" placeholder="请输入您的问题..." data-i18n="[placeholder]customerService.chat.placeholder">
+            <button class="send-message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n/zh.js"></script>
+    <script src="js/i18n/en.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/customer-service.js"></script>
+</body>
+</html>

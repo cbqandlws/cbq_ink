@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景 -->
+    <rect width="200" height="200" fill="#ffffff"/>
+    
+    <!-- 二维码边框 -->
+    <rect x="20" y="20" width="160" height="160" fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- 二维码图案（简化版） -->
+    <rect x="40" y="40" width="20" height="20" fill="#333"/>
+    <rect x="140" y="40" width="20" height="20" fill="#333"/>
+    <rect x="40" y="140" width="20" height="20" fill="#333"/>
+    
+    <!-- 中心图案 -->
+    <rect x="80" y="80" width="40" height="40" fill="#333"/>
+    
+    <!-- 提示文字 -->
+    <text x="100" y="190" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">
+        扫码关注
+    </text>
+</svg>

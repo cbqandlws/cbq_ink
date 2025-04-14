@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系我们 - 随时为您提供专业服务">
+    <meta name="keywords" content="联系方式,客户服务,咨询,支持">
+    <meta name="robots" content="index, follow">
+    <title>联系我们 - 企业服务解决方案</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "联系我们",
+        "description": "联系我们页面",
+        "publisher": {
+            "@type": "Organization",
+            "name": "企业服务解决方案",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "images/logo.svg"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "您的街道地址",
+                "addressLocality": "城市",
+                "addressRegion": "省份",
+                "postalCode": "邮编",
+                "addressCountry": "CN"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+86-xxx-xxxx-xxxx",
+                "contactType": "customer service",
+                "email": "contact@yourwebsite.com"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="企业服务解决方案" data-i18n="[alt]nav.logo">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="菜单">
+                    <span></span>
+                </button>
+                <ul class="main-nav">
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="category.html" data-i18n="nav.solutions">解决方案</a></li>
+                    <li><a href="article.html" data-i18n="nav.cases">案例展示</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="nav.contact">联系我们</a></li>
+                    <li><a href="customer-service.html" data-i18n="nav.service">客户服务</a></li>
+                </ul>
+                <div class="language-switch">
+                    <button onclick="changeLanguage('zh')" class="active">中文</button>
+                    <button onclick="changeLanguage('en')">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-header">
+            <div class="container">
+                <h1>联系我们</h1>
+                <p class="lead">我们期待听到您的声音，随时为您提供专业的服务与支持</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>联系方式</h2>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info-details">
+                                    <h3>公司地址</h3>
+                                    <p>某某市某某区某某街道XX号</p>
+                                    <p>邮编：100000</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="info-details">
+                                    <h3>电话咨询</h3>
+                                    <p>+86-XXX-XXXX-XXXX</p>
+                                    <p>周一至周五 9:00-18:00</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info-details">
+                                    <h3>电子邮件</h3>
+                                    <p>contact@yourcompany.com</p>
+                                    <p>support@yourcompany.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-wechat"></i>
+                                <div class="info-details">
+                                    <h3>微信咨询</h3>
+                                    <p>扫描下方二维码添加客服微信</p>
+                                    <img src="images/qr-code.png" alt="微信二维码" width="120" height="120">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>在线咨询</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">姓名 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱 <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">电话</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">主题 <span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">请选择咨询主题</option>
+                                    <option value="business">业务咨询</option>
+                                    <option value="technical">技术支持</option>
+                                    <option value="cooperation">合作洽谈</option>
+                                    <option value="other">其他问题</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">留言内容 <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">发送消息</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>公司位置</h2>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>专注于提供创新的企业服务解决方案，助力企业实现数字化转型</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/category.html">服务内容</a></li>
+                        <li><a href="/contact.html">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +86-XXX-XXXX-XXXX</li>
+                        <li><i class="fas fa-envelope"></i> contact@yourcompany.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 某某市某某区某某街道XX号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 企业服务解决方案. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="customer-service-widget">
+        <button class="cs-toggle" aria-label="客户服务">
+            <i class="fas fa-headset"></i>
+        </button>
+        <div class="cs-panel">
+            <div class="cs-header">
+                <h3>在线客服</h3>
+                <span class="cs-status">在线</span>
+                <button class="cs-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cs-content">
+                <div class="cs-info">
+                    <p>工作时间：周一至周五 9:00-18:00</p>
+                    <p>您可以通过以下方式联系我们：</p>
+                </div>
+                <div class="cs-options">
+                    <a href="#" class="cs-option">
+                        <i class="fab fa-weixin"></i>
+                        <span>微信客服</span>
+                        <div class="qr-code">
+                            <img src="images/qr-placeholder.svg" alt="客服微信二维码">
+                        </div>
+                    </a>
+                    <a href="tel:400-123-4567" class="cs-option">
+                        <i class="fas fa-phone"></i>
+                        <span>400-123-4567</span>
+                    </a>
+                    <a href="mailto:support@example.com" class="cs-option">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@example.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 第三方库 -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_BAIDU_MAP_KEY"></script>
+    
+    <!-- 核心脚本 -->
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    
+    <!-- 页面特定脚本 -->
+    <script src="js/map.js"></script>
+    <script src="js/contact.js"></script>
+    
+    <!-- 初始化 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化地图
+            initMap();
+            // 初始化表单验证
+            initContactForm();
+        });
+    </script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="企业服务解决方案 - 探索我们的全方位服务类别">
+    <meta name="robots" content="index, follow">
+    <title>解决方案 - 企业服务解决方案</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "企业服务解决方案",
+        "description": "探索我们的全方位企业服务解决方案",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "企业服务解决方案",
+            "url": "https://www.example.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "images/logo.svg"
+            }
+        }
+    }
+    </script>
+    <style>
+    main { padding-top: var(--header-height); }
+    .category-header {
+        background: var(--light-gray);
+        padding: 4rem 0;
+        text-align: center;
+    }
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+    .category-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .category-card:hover {
+        transform: translateY(-5px);
+    }
+    .category-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+    .category-card h2 {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+    .category-card p {
+        color: var(--dark-gray);
+        margin-bottom: 1.5rem;
+    }
+    .recent-posts {
+        list-style: none;
+        margin: 1.5rem 0;
+    }
+    .recent-posts li {
+        margin-bottom: 0.8rem;
+    }
+    .recent-posts a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .recent-posts a:hover {
+        color: var(--primary-color);
+    }
+    .view-all {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s;
+    }
+    .view-all:hover {
+        background: var(--secondary-color);
+    }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="企业服务解决方案" data-i18n="[alt]nav.logo">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="菜单">
+                    <span></span>
+                </button>
+                <ul class="main-nav">
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="category.html" class="active" data-i18n="nav.solutions">解决方案</a></li>
+                    <li><a href="article.html" data-i18n="nav.cases">案例展示</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+                    <li><a href="customer-service.html" data-i18n="nav.service">客户服务</a></li>
+                </ul>
+                <div class="language-switch">
+                    <button onclick="changeLanguage('zh')" class="active">中文</button>
+                    <button onclick="changeLanguage('en')">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="category-header">
+            <div class="container">
+                <h1>内容分类</h1>
+                <p>探索我们的各个主题分类</p>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <h2>数字化转型解决方案</h2>
+                        <p>为企业提供全方位的数字化转型服务，提升运营效率</p>
+                        <ul class="recent-posts">
+                            <li><a href="article.html">某制造业企业数字化转型案例</a></li>
+                            <li><a href="article.html">智能工厂解决方案实践</a></li>
+                            <li><a href="article.html">数据驱动决策的成功案例</a></li>
+                        </ul>
+                        <a href="article.html" class="view-all">查看全部</a>
+                    </article>
+
+                    <article class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h2>云服务解决方案</h2>
+                        <p>专业的云迁移、部署和管理服务，确保业务稳定运行</p>
+                        <ul class="recent-posts">
+                            <li><a href="article.html">混合云架构设计与实施</a></li>
+                            <li><a href="article.html">云安全解决方案</a></li>
+                            <li><a href="article.html">云成本优化策略</a></li>
+                        </ul>
+                        <a href="article.html" class="view-all">查看全部</a>
+                    </article>
+
+                    <article class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2>网络安全解决方案</h2>
+                        <p>全面的网络安全防护，保护企业数字资产</p>
+                        <ul class="recent-posts">
+                            <li><a href="article.html">企业安全体系建设</a></li>
+                            <li><a href="article.html">威胁检测与响应</a></li>
+                            <li><a href="article.html">数据安全保护方案</a></li>
+                        </ul>
+                        <a href="article.html" class="view-all">查看全部</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>简短的公司介绍</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 您的网站名称. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
